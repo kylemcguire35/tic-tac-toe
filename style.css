@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main title */
+.title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+/* Displays and hides WIN or TIE */
+.alert-container {
+    position: absolute;
+}
+
+.winner,
+.tie {
+    position: absolute;
+    padding: 10px;
+    font-size: 50px;
+    border: solid 3px;
+    z-index: 10;
+    background-color: lightskyblue;
+}
+
+.winner {
+
+    display: none;
+    top: 106px;
+    left: 223px;
+}
+
+.tie {
+    display: none;
+    top: 106px;
+    left: 283px;
+}
+
+/* Main game container, holds players and grid */
+.game-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 700px;
+    height: 300px;
+    margin: auto;
+}
+
+/* Displays players and chooses active player */
+.player {
+    text-align: center;
+}
+
+#player-1-container {
+    grid-area: 1 / 1 / span 3 / span 1;
+}
+
+#player-2-container {
+    grid-area: 1 / 5 / span 3 / span 1;
+}
+
+.active {
+    text-align: center;
+    color: darkcyan;
+}
+
+/* Styles individual boxes and hover */
+.box {
+    height: auto;
+    width: auto;
+    text-align: center;
+    justify-items: center;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80px;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: lightskyblue;
+}
+
+/* List of boxes and borders to create game board */
+#box-1{
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+}
+
+#box-2{
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+}
+#box-3{
+    border-bottom: solid 3px;
+}
+#box-4{
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+}
+
+#box-5{
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+}
+
+#box-6{
+    border-bottom: solid 3px;
+}
+
+#box-7{
+    border-right: solid 3px;
+}
+#box-8{
+    border-right: solid 3px;
+}
+
+/* button to create new game */
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    margin: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+}
